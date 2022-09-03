@@ -128,4 +128,29 @@
    }
 
    echo "<hr>";
+    
+ $h = 9;
+    $a = 0;
+    for($i=0; $i<$h; $i++){
+	    for($j=$h; $j>$a; $j--){
+		    print "&nbsp;";
+	    }
+	    for($k=0; $k<=$a; $k++){
+		    if($i==(int)($h/2)){
+			    print "+&nbsp;";
+		    }else{
+			    if($k==0 || $k==$a || $k==(int)($a/2)){
+				    print "+&nbsp;";
+			    }else{
+				    print "&nbsp;&nbsp;";
+			    }
+		    }
+	    }
+	    if($i<4){
+		    $a+=2;
+	    }else{
+		    $a-=2;
+	    }
+	    print "<br/>";
+    }
 ?>
